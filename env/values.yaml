@@ -17,3 +17,9 @@ jenkins:
     Global:
       EnvVars:
         TILLER_NAMESPACE: kube-system
+        
+global:
+  keycloak:
+    url: "http://activiti-keycloak.jx-staging.35.228.195.195.nip.io/auth"
+  gateway:
+    host: "activiti-cloud-gateway.jx-staging.35.228.195.195.nip.io"
