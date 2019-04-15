@@ -1,4 +1,7 @@
 dependencies:
+- name: example-runtime-bundle
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 7.1.75
 - alias: expose
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
