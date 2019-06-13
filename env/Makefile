@@ -15,7 +15,9 @@ build: clean
 	helm lint ${DIR}
 
 install: 
-	helm upgrade ${NAMESPACE} ${DIR} --install --namespace ${NAMESPACE} --debug --name staging-full-chart
+
+	helm upgrade --install  staging-full-chart .   --namespace ${NAMESPACE}   --debug
+
 
 delete:
 	helm delete --purge --no-hooks  --namespace ${NAMESPACE} --name staging-full-chart
