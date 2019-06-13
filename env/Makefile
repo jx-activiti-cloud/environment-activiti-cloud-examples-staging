@@ -15,13 +15,11 @@ build: clean
 	helm lint .
 
 install: 
-
-	helm upgrade --install  staging-full-chart .   --namespace ${NAMESPACE}   --debug
+	  helm upgrade --install  staging-full-chart .   --namespace ${NAMESPACE}   --debug
 
 
 delete:
-	helm delete --purge --no-hooks  staging-full-chart
-
+	helm delete --purge --no-hooks  staging-full-chart||(echo "helm delete failed failed $$?")
 clean:
 
 
