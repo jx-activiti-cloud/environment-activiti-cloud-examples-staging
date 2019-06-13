@@ -20,7 +20,7 @@ install:
 
 
 delete:
-	helm delete --purge --no-hooks  --namespace ${NAMESPACE} --name staging-full-chart
+	helm delete --purge --no-hooks  staging-full-chart
 
 clean:
 
