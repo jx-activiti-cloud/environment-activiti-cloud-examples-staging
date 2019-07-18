@@ -18,8 +18,8 @@ install:
 	helm upgrade ${NAMESPACE} ${DIR} --install --namespace ${NAMESPACE} --debug
 
 delete:
-	helm delete --purge ${NAMESPACE}  --namespace ${NAMESPACE}
-
+	helm delete --purge ${NAMESPACE}  --namespace ${NAMESPACE}||echo "error during delete chart"
+	helm delete namespace jx-staging ||echo "error during delete namespace"
 clean:
 
 
